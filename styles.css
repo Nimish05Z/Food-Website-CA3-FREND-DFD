@@ -1,0 +1,233 @@
+@font-face {
+  font-family: "Cafe-Francoise";
+  src: url("./fonts/CafeFrancoise_D.otf") format("opentype"),
+    url("./fonts/CafeFrancoise_D.otf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cafe-Francoise";
+  color: #000000;
+  background-color: #cde0e0;
+}
+
+header {
+  position: relative;
+  background-image: url("./assets/bg3.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #8f4242;
+  text-align: center;
+  height: 370px;
+}
+header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #cde0e0);
+  pointer-events: none;
+}
+
+header div h1 {
+  font-size: 700%;
+}
+
+.logo {
+  position: absolute;
+  top: 4%;
+  left: 1%;
+  max-width: 150px;
+  border-radius: 25px;
+}
+
+header input,
+header button {
+  font-weight: 700;
+  text-align: center;
+  height: 45px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin-top: 4%;
+  font-size: 20px;
+}
+
+header input {
+  width: 28%;
+  background: linear-gradient(to top right, beige, rgb(241, 214, 178));
+  color: #b40101;
+}
+header input:hover {
+  background: linear-gradient(to bottom right, beige, rgb(241, 214, 178));
+  color: #cc0000;
+}
+
+header button {
+  width: 7%;
+  margin-top: 4%;
+  color: #fff8e6;
+  font-size: 16px;
+  outline: none;
+  cursor: pointer;
+  background-color: #8f4242;
+  margin-left: -1%;
+}
+
+header button:hover {
+  background-color: #cc0000;
+  color: white;
+}
+
+header h1:hover {
+  color: #b40101;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+main::after {
+  content: "";
+  top: 44%;
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0), #cde0e0);
+  pointer-events: none;
+}
+
+.gif p {
+  position: absolute;
+  top: 62%;
+  left: 1%;
+  font-size: 300%;
+  font-weight: 700;
+  background: -webkit-linear-gradient(#e3d7f3, #f4746d, #ffcaef);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: rotate(315deg);
+}
+
+.gif img {
+  top: 50%;
+  left: 6%;
+  position: absolute;
+  transform: scaleX(-1) rotate(100deg);
+}
+
+main section:nth-child(1) h2 {
+  letter-spacing: 20px;
+  font-size: 80px;
+  margin-bottom: 20px;
+  color: black;
+}
+main section:nth-child(2) h2 {
+  /* font-weight: 300; */
+  word-spacing: 20px;
+  letter-spacing: 15px;
+  font-size: 60px;
+  margin-bottom: 10px;
+  margin-top: 40px;
+}
+
+.random-meal,
+.searched-meals {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 30px;
+  word-spacing: 10px;
+}
+
+.random-meal img {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.random-meal img,
+.searched-meals img {
+  outline: 8px solid #8f4242;
+}
+.random-meal img:hover,
+.searched-meals img:hover {
+  outline: 10px solid #b40101;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-top: 20px;
+  height: auto;
+  padding: 20px;
+  border-radius: 30px;
+  background-color: #7bbcc0;
+}
+.modal-content h2 {
+  text-align: center;
+  font-size: 70px;
+}
+
+#mealIngredients {
+  list-style: decimal;
+  padding: 10%;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+#mealIngredients li {
+  position: relative;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.meal-item img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.meal-item {
+  width: 460px;
+  height: 400px;
+  margin: 10px;
+  padding-top: 20px;
+  display: inline-block;
+  margin: auto;
+}
+
+.meal-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}

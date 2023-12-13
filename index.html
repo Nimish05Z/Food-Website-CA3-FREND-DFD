@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Non Veggies</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <h1>Non Veggies</h1>
+        <img src="./assets/logo.png" alt="logo" class="logo" />
+        <div class="search-container">
+          <input type="text" id="categoryInput" placeholder="What would you like to have today">
+          <button id="searchButton" onclick="searchByCategory()">Search</button>
+        </div>
+        <div id="mealContainer"></div>
+      </div>
+    </header>
+    <main>
+      <section class="random-meal">
+        <h2>Random Meal</h2>
+        <div id="randomMeal">
+          <!-- Random meal images will be displayed here -->
+        </div>
+      </section>
+      <section class="searched-meals">
+        <hr>
+        <hr>
+        <hr>
+        <h2>Menu by Category</h2>
+        <p id="searchedMealText">These are the searched meal by category</p>
+        <div class="meal-container" id="searchedMealContainer">
+          <!-- Searched meal images will be displayed here -->
+        </div>
+      </section>
+      <div id="mealModal" class="modal">
+        <div class="modal-content">
+          <span class="close"></span>
+          <h2>Meal Ingredients</h2>
+          <ul id="mealIngredients">
+            <!-- Display meal ingredients here -->
+          </ul>
+        </div>
+      </div>
+      <div class="gif">
+        <p>Click for Ingredients</p>
+        <img  src="./assets/arrow+pink.gif" alt="">
+      </div>
+    <script src="./main.js" defer></script>
+  </body>
+</html>
